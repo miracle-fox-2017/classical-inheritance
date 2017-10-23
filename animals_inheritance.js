@@ -11,6 +11,9 @@ class SuperPower{
   use_laser_vision(){
     return 'laser...bipbipbip..'
   }
+  kamehameha(){
+    return 'ka..me..ha..me..haaa'
+  }
 }
 
 
@@ -32,3 +35,5 @@ let chimp = new Chimpanze(8, true)
 let frog = new Frog(12)
 console.log(frog);
 console.log(frog.superpower.use_laser_vision());
+console.log(chimp);
+console.log(chimp.superpower.kamehameha());

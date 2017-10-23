@@ -4,6 +4,7 @@ class Animal{
     this.jumlahKaki=4;
     this.Howtheymove='terbang';
     this.isVegan=true;
+    this.superpower= new SuperPower()
   }
 }
 class Bird extends Animal{
@@ -36,12 +37,24 @@ class Wolf extends Animal{
 
   }
 }
+class SuperPower{
+  constructor(){
+
+  }
+  use_laser_vision(){
+    return('ZZZZZZIIINKKKKKK!!!')
+
+  }
+  be_invisible(){
+    return('POOF!')
+  }
+}
 
 let bird = new Bird()
-console.log(bird);
+// console.log(bird);
 let bat = new Bat()
-console.log(bat);
+// console.log(bat);
 let fox = new Fox()
-console.log(fox);
+console.log(`Fox is using ${fox.superpower.use_laser_vision()}`);
 let wolf = new Wolf()
-console.log(wolf);
+// console.log(wolf);

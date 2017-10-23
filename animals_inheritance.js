@@ -5,6 +5,7 @@ class Animal {
     this.num_legs = 2,
     this.is_warm_blooded = false
     this.live_at = 'both'
+    this.superpower = new SuperPower()
   }
 }
 class Frog extends Animal {
@@ -12,7 +13,7 @@ class Frog extends Animal {
     super()
     this.name = 'Frog'
     this.num_legs = 4
-    this.superpower = new SuperPower()
+
   }
 }
 
@@ -29,7 +30,6 @@ class Chicken extends Animal {
     super()
     this.name = 'Chicken'
     this.live_at = 'land'
-    this.superpower = new SuperPower()
   }
 }
 class Sheep extends Animal {
@@ -38,14 +38,12 @@ class Sheep extends Animal {
     this.name = 'Sheep'
     this.num_legs = 4
     this.live_at = 'land'
-    this.superpower = new SuperPower()
   }
 }
 class Duck extends Animal {
   constructor(){
     super()
     this.name = 'Duck'
-    this.superpower = new SuperPower()
   }
 
 }

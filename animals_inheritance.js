@@ -1,79 +1,70 @@
 "use strict"
 class Animal {
-  constructor (){
-    this.legs = 4
-    this.food = 'leaf'
-    this.sound = 'wooof'
-    this.kekuatan = new SuperPower()
+  constructor (sound,food,name,is_warm_blood=true,leg=4){
+    this.name = name
+    this.legs = leg
+    this.food = food
+    this.sound = sound
+    this.kekuatan = new SuperPower(this.name)
   }
 }
 
-class elephant extends Animal{
+class Elephant extends Animal{
   constructor(){
-    super();
-    this.sound = 'preeeeeeet'
+    super('preeet','grass','elephant');
 
   }
 }
 
 class Bear extends Animal{
   constructor(){
-    super();
-    this.food = 'fish'
-    this.sound = 'groooaaarr'
+    super('groaarr','fish','bear');
   }
 }
 
 class Wolf extends Animal{
   constructor(){
-  super()
-  this.food = 'meat'
+  super('wooof','meat','wolf')
   }
 }
 
 class Monkey extends Animal{
   constructor(){
-  super()
+  super('eeeek','fruit','monkey')
   this.leg = 2
-  this.food = 'fruit'
-  this.sound = 'eeeekkk'
   }
 }
 
 class Tiger extends Animal{
   constructor(){
-  super()
-  this.sound = 'grrrrr'
-  this.food = 'meat'
+  super('grrrr','meat','tiger')
   }
 }
 
-class Cat extends Tiger{
-  constructor(){
-  super()
-  this.sound = 'meooow'
-  this.meat = 'fish'
-  }
-}
+
 
 
 class SuperPower{
+  constructor(name){
+    this.name = name
+  }
   use_laser_vision(){
-    return 'ngiiiiiingg jedaaaarrrrr'
+    return this.name+' ngiiiiiingg jedaaaarrrrr'
   }
   use_be_invisible(){
-    return ''
+    return this.name+''
   }
   use_double_power(){
-    return 'Im twice bigger'
+    return this.name+' Im twice bigger'
   }
 }
 
-let binatang = new Animal();
-let gajah = new elephant();
+//let binatang = new Animal();
+let gajah = new Elephant();
 let beruang = new Bear();
-let kucing = new Cat()
-let kekuatan = new SuperPower();
+let monyet = new Monkey()
+//let kekuatan = new SuperPower();
 console.log(gajah.kekuatan.use_laser_vision());
-console.log(kucing.kekuatan.use_be_invisible())
+console.log(monyet.kekuatan.use_be_invisible())
 console.log(beruang.kekuatan.use_double_power());
+//console.log(gajah.kekuatan)

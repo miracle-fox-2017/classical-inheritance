@@ -4,7 +4,7 @@ class Animals {
     this.kaki = 4
     this.cakar = true
     this.taring = true
-    this.superPower = new SuperPower(this.kaki)
+    this.superPower = new SuperPower(this.taring)
   }
 }
 
@@ -31,24 +31,24 @@ class Bear extends Animals{
 }
 
 class Snake extends Animals{
-  constructor(){
-    super()
-    this.kaki = 0
-    this.cakar = false
+  constructor(kaki, cakar){
+    super(kaki, cakar)
+    this.kaki = kaki
+    this.cakar = cakar
 
   }
 }
 
 class SuperPower {
-  constructor(kaki){
-    this.kaki = kaki;
+  constructor(taring){
+    this.taring = true
     this.regen = this.regeneration();
     this.invis = false;
     this.nuke = '-'
   }
   regeneration(){
-    if(this.kaki == 4){
-      return true
+    if(this.taring == true){
+      return 'i am immortal'
     }else{
       return false
     }
@@ -67,10 +67,10 @@ let animal = new Animals()
 let rubah = new Fox()
 let serigala = new Wolf()
 let beruang = new Bear()
-let ular = new Snake()
+let ular = new Snake(0, false)
 
 // console.log(animal)
-console.log(rubah)
+console.log(rubah.superPower.regeneration())
 console.log(ular)
 
 beruang.superPower.pupNuclear()
